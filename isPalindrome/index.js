@@ -1,7 +1,6 @@
 isPalindrome = string => {
   string = string.toLowerCase();
   const charaArr = string.split('');
-  console.log(charaArr);
   const validCharaArr = 'abcdefghijklmnopqrstuvwxyz'.split('');
  
   let lettersArr = []; 
@@ -18,4 +17,4 @@ isPalindrome = string => {
   else console.log('false');
  }
  
- isPalindrome("ada");
+ isPalindrome("Madam, I'm Adam");

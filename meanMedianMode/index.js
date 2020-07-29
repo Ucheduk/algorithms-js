@@ -6,7 +6,7 @@ meanMedianMode = arr => {
   }
 }
 
-getMean = arr => {
+const getMean = arr => {
   let sum = 0;
 
   arr.forEach(num => {
@@ -17,7 +17,7 @@ getMean = arr => {
   return mean;
 }
 
-getMedian = arr => {
+const getMedian = arr => {
   arr.sort((a, b) => a - b);
   let median;
 
@@ -33,7 +33,7 @@ getMedian = arr => {
   return median
 }
 
-getMode = arr => {
+const getMode = arr => {
   let modeObj = {}
 
   arr.map(num => {
@@ -49,10 +49,10 @@ getMode = arr => {
     }
     else if (modeObj[num] === maxFrequency) modes.push(num);
   }
-  if (modes.length === Object.keys(modeObj)) mode = [];
+  if (modes.length === Object.keys(modeObj).length) modes = [];
 
   console.log("Modes", modes);
   return modes;
 }
 
-meanMedianMode([2, 3, 4, 5, 4, 6, 1]);
+meanMedianMode([2, 2, 1, 1, 3]);
