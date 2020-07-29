@@ -2,9 +2,9 @@ const allStates = ["Abia", "Adamawa", "Anambra", "Akwa Ibom", "Bauchi", "Bayelsa
 
 const sortByNameLength = (states, ascYN) => {
   states.sort( (a, b) => {           // sort array by length of text
-            if (ascYN) return a.length - b.length;      // ASC -> a - b
-            else return b.length - a.length || a.localeCompare(b);            // DESC -> b - a  || sort by alphabet
-        });
+      if (ascYN) return a.length - b.length;      // ASC -> a - b
+      else return b.length - a.length || a.localeCompare(b);            // DESC -> b - a  || sort by alphabet
+  });
   return states;
 }
 
