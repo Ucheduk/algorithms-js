@@ -1,4 +1,4 @@
-fibMemo = (index, cache) => {
+const fibMemo = (index, cache) => {
   cache = cache || [];
   if (cache[index]) return cache[index];
 
@@ -10,4 +10,4 @@ fibMemo = (index, cache) => {
   return cache[index];
 }
 
-fibMemo(1); // O(n) Linear time compelxety
+console.log(fibMemo(10)) // O(n) Linear time complexity
