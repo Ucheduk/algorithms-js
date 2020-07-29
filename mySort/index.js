@@ -34,4 +34,4 @@ function mySort(num) { // An algorithm that takes a list of int, returns a new l
 
 }
 
-mySort( [90, 45, 66, 'bye', 100.5] );
+mySort( [90, 45, 66, 'bye', 5, 2, 100.5] );
