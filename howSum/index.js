@@ -5,10 +5,11 @@ const howSum = (sum, numArray, memo = {}) => {
 
   for (let num of numArray) {
     const remainder = sum - num;
-    const remainderCombination = howSum(remainder, numArray, memo)
-    const combination = [ ...remainderCombination, num ]
-    memo[sum] = combination
-    return combination;
+    const remainderResult = howSum(remainder, numArray, memo)
+    if (remainderResult !== null) {
+      memo[sum] = [ ...remainderResult, num ]
+      return memo[sum];
+    }
       
   }
   memo[sum] = null
@@ -17,15 +18,16 @@ const howSum = (sum, numArray, memo = {}) => {
 
 console.log(howSum(7, [6, 1, 3, 4, 3]))
 console.log(howSum(7, [2, 4]))
-console.log(howSum(100, [1, 2, 5, 25]))
+console.log(howSum(8, [2, 3, 5]))
+console.log(howSum(300, [7, 14]))
 
 // m = sum
 // n = numArray.length
 
 // Brute Force
-// time: O(n^m)
+// time: O(n^m * m)
 // space: O(m)
 
 // Memoized
-// time: O(n * m)
-// space: O(m)
+// time: O(n * m^2)
+// space: O(m^2)
